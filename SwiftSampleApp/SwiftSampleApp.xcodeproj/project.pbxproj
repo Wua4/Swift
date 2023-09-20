@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F214BC22ABBB281009B0C08 /* DynamicFont in Frameworks */ = {isa = PBXBuildFile; productRef = 9F214BC12ABBB281009B0C08 /* DynamicFont */; };
 		9F4125692ABBA6F00019717D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4125682ABBA6F00019717D /* AppDelegate.swift */; };
 		9F41256B2ABBA6F00019717D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41256A2ABBA6F00019717D /* SceneDelegate.swift */; };
 		9F41256D2ABBA6F00019717D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41256C2ABBA6F00019717D /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		9F4125712ABBA6F10019717D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F4125742ABBA6F10019717D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F4125762ABBA6F10019717D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4125842ABBB1370019717D /* DynamicFont */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DynamicFont; path = ../SPM/DynamicFont; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F214BC22ABBB281009B0C08 /* DynamicFont in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F214BC02ABBB281009B0C08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F41255C2ABBA6F00019717D = {
 			isa = PBXGroup;
 			children = (
+				9F41257F2ABBAAA20019717D /* Packages */,
 				9F4125672ABBA6F00019717D /* SwiftSampleApp */,
 				9F4125662ABBA6F00019717D /* Products */,
+				9F214BC02ABBB281009B0C08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +79,14 @@
 			path = SwiftSampleApp;
 			sourceTree = "<group>";
 		};
+		9F41257F2ABBAAA20019717D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				9F4125842ABBB1370019717D /* DynamicFont */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = SwiftSampleApp;
+			packageProductDependencies = (
+				9F214BC12ABBB281009B0C08 /* DynamicFont */,
+			);
 			productName = SwiftSampleApp;
 			productReference = 9F4125652ABBA6F00019717D /* SwiftSampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -358,6 +381,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F214BC12ABBB281009B0C08 /* DynamicFont */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DynamicFont;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F41255D2ABBA6F00019717D /* Project object */;
 }

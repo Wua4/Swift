@@ -29,7 +29,10 @@
 //}
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
+#endif
+
 
 public class DynamicFont {
     public static func preferredFont(forTextStyle textStyle: UIFont.TextStyle) -> UIFont {
@@ -53,6 +56,7 @@ public class DynamicFont {
 
 public extension UILabel {
     func setDynamicFont(forTextStyle textStyle: UIFont.TextStyle) {
+        print("Font Changed")
         self.font = DynamicFont.preferredFont(forTextStyle: textStyle)
     }
 }
@@ -63,13 +67,16 @@ public extension UIButton {
     }
 }
 
-public extension UIViewController {
-    func setupContentSizeObserver() {
+extension UIViewController {
+    public func setupContentSizeObserver() {
+        print("Set Observer")
+        NotificationCenter.default.removeObserver(self, name: UIContentSizeCategory.didChangeNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(preferredContentSizeChanged(_:)),
                                                name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
 
     @objc func preferredContentSizeChanged(_ notification: Notification) {
+        print("Size Changed")
         setupDynamicFontStyles()
     }
 
@@ -85,6 +92,7 @@ public extension UIViewController {
     /// someLabel.setDynamicFont(forTextStyle: .title1)
     /// someButton.setDynamicFont(forTextStyle: .body)
     /// ```
-    func setupDynamicFontStyles() {
+    @objc open func setupDynamicFontStyles() {
+       print("Must override")
     }
 }
