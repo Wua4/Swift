@@ -32,6 +32,12 @@ import Foundation
 #if canImport(UIKit)
 import UIKit
 #endif
+// or can use
+#if os(iOS)
+// Code specific to iOS
+#else
+// Other
+#endif
 
 
 public class DynamicFont {
