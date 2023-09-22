@@ -8,7 +8,6 @@
 import UIKit
 import DynamicFont
 
-
 class ViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
 

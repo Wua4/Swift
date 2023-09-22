@@ -14,6 +14,7 @@
 		9F4125702ABBA6F00019717D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F41256E2ABBA6F00019717D /* Main.storyboard */; };
 		9F4125722ABBA6F10019717D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4125712ABBA6F10019717D /* Assets.xcassets */; };
 		9F4125752ABBA6F10019717D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4125732ABBA6F10019717D /* LaunchScreen.storyboard */; };
+		9F645B382ABD31720017E54D /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 9F645B372ABD31720017E54D /* Dependencies */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		9F4125742ABBA6F10019717D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F4125762ABBA6F10019717D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4125842ABBB1370019717D /* DynamicFont */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DynamicFont; path = ../SPM/DynamicFont; sourceTree = "<group>"; };
+		9F645B342ABD30B00017E54D /* Dependencies */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Dependencies; sourceTree = "<group>"; };
+		9F645B362ABD30F10017E54D /* Dependencies */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Dependencies; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F214BC22ABBB281009B0C08 /* DynamicFont in Frameworks */,
+				9F645B382ABD31720017E54D /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +54,7 @@
 		9F41255C2ABBA6F00019717D = {
 			isa = PBXGroup;
 			children = (
+				9F645B342ABD30B00017E54D /* Dependencies */,
 				9F41257F2ABBAAA20019717D /* Packages */,
 				9F4125672ABBA6F00019717D /* SwiftSampleApp */,
 				9F4125662ABBA6F00019717D /* Products */,
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9F4125842ABBB1370019717D /* DynamicFont */,
+				9F645B362ABD30F10017E54D /* Dependencies */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -105,6 +111,7 @@
 			name = SwiftSampleApp;
 			packageProductDependencies = (
 				9F214BC12ABBB281009B0C08 /* DynamicFont */,
+				9F645B372ABD31720017E54D /* Dependencies */,
 			);
 			productName = SwiftSampleApp;
 			productReference = 9F4125652ABBA6F00019717D /* SwiftSampleApp.app */;
@@ -386,6 +393,10 @@
 		9F214BC12ABBB281009B0C08 /* DynamicFont */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DynamicFont;
+		};
+		9F645B372ABD31720017E54D /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Dependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
