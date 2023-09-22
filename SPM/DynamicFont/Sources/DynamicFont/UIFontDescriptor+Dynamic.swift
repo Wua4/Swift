@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
+#endif
 
 public extension UIFontDescriptor {
     final class func preferredDescriptor(textStyle: UIFont.TextStyle) -> UIFontDescriptor {

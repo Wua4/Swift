@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "dynamicfont",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Wua4/DynamicFont.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1cf42b0ce3c2a98df757fd77e919b94cf1b85297"
+      }
+    }
+  ],
+  "version" : 2
+}

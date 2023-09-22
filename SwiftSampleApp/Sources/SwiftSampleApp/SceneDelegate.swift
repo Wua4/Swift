@@ -5,8 +5,9 @@
 //  Created by Allen on 9/20/23.
 //
 
+#if canImport(UIKit)
 import UIKit
-
+#endif
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
