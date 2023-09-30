@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "flexstackview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Wua4/FlexStackView.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c0d459fc86a8dba6fdc2f7b81d81dd804efc2537"
+      }
+    },
+    {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",

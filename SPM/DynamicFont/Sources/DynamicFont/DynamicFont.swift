@@ -1,15 +1,15 @@
 /*
-- [ ] Problem 2: Reasonable Dynamically Sized Font Library
-    - [ ] Normal iOS HIG are too large in Large Text accesibility size
-        - [ ] Convert normal+large to use normal size.
-    - [ ] Ease of use prioritized
-        - [ ] Simple naming
-        - [ ] Init functions handle Observers
-        - [ ] Handle storyboard button issue (Type:System/Style:Default)
-    - [ ] See if override UILabel allowed (Care for buttons/attributed text) - NO, TOO DANGEROUS
-        - [ ] Storyboard
-        - [ ] ViewController (titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
-    - [ ] iPadOS will use normal HIG standards.
+ - [x] Problem 2: DynamicFont, Reasonable Dynamically Sized Font Library
+     - [x] Normal iOS HIG are too large in Large Text accesibility size
+         - [x] Convert normal+large to use normal size.
+     - [x] Leave iPad alone
+     - [x] Ease of use prioritized
+         - [x] Init functions handle Observers
+         - [x] Handle storyboard button issue (Type:System/Style:Default) - CANT
+         - [x] Simple naming
+     - [x] See if override UILabel allowed (Care for buttons/attributed text) - NO, TOO DANGEROUS
+         - [ ] Storyboard
+         - [ ] ViewController (titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
 */
 
 // USAGE
@@ -42,6 +42,11 @@ import UIKit
 
 public class DynamicFont {
     public static func preferredFont(forTextStyle textStyle: UIFont.TextStyle) -> UIFont {
+        // iPad can tolerate extreme font sizes
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return UIFont.preferredFont(forTextStyle: textStyle)
+        }
+        
         let descriptor = UIFontDescriptor.preferredDescriptor(textStyle: textStyle)
         return UIFont(descriptor: descriptor, size: 0)
     }
@@ -67,6 +72,7 @@ public extension UILabel {
     }
 }
 
+// for storyboard, set to type: system, style: default
 public extension UIButton {
     func setDynamicFont(forTextStyle textStyle: UIFont.TextStyle) {
         self.titleLabel?.font = DynamicFont.preferredFont(forTextStyle: textStyle)
@@ -81,11 +87,6 @@ extension UIViewController {
                                                name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
 
-    @objc func preferredContentSizeChanged(_ notification: Notification) {
-        print("Size Changed")
-        setupDynamicFontStyles()
-    }
-
     /// Function should be overrided
     ///
     /// ```
@@ -98,7 +99,7 @@ extension UIViewController {
     /// someLabel.setDynamicFont(forTextStyle: .title1)
     /// someButton.setDynamicFont(forTextStyle: .body)
     /// ```
-    @objc open func setupDynamicFontStyles() {
-       print("Must override")
+    @objc open func preferredContentSizeChanged(_ notification: Notification) {
+        print("Must override")
     }
 }
