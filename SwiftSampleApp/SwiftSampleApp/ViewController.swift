@@ -61,7 +61,9 @@ extension ViewController {
         let button = UIButton()
         button.backgroundColor = .gray
         button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 16
+        button.layer.cornerRadius = 21
+
+        NSLayoutConstraint.activate([button.heightAnchor.constraint(equalToConstant: 42)])
 
         button.setDynamicFont(forTextStyle: .body)
         button.setTitle(title, for: .normal)
@@ -89,7 +91,7 @@ extension ViewController {
     @objc func openFSSwiftUIView() {
         print("Test FlexStack (SwiftUI)")
         guard let navController = self.navigationController else { return }
-        var swiftUIView = SwiftUIView()
+        var swiftUIView = SwiftUIView_FlexStack()
         swiftUIView.navigationController = navController
         let swiftUIViewController = UIHostingController(rootView: swiftUIView)
         self.navigationController?.pushViewController(swiftUIViewController, animated: true)

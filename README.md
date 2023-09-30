@@ -1,6 +1,8 @@
 # Swift
 Swift Sample Projects
 
+- https://github.com/Wua4/FlexStackView
+- https://github.com/Wua4/DynamicFont
 
     - [x] DEVELOP SAMPLE PACKAGES
         - [x] Need to use via local and remote dependency. 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F011B572AC7C2B900B283A8 /* SwiftUIView+FlexStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F011B562AC7C2B900B283A8 /* SwiftUIView+FlexStack.swift */; };
 		9F214BC22ABBB281009B0C08 /* DynamicFont in Frameworks */ = {isa = PBXBuildFile; productRef = 9F214BC12ABBB281009B0C08 /* DynamicFont */; };
 		9F4125692ABBA6F00019717D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4125682ABBA6F00019717D /* AppDelegate.swift */; };
 		9F41256B2ABBA6F00019717D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41256A2ABBA6F00019717D /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F011B562AC7C2B900B283A8 /* SwiftUIView+FlexStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUIView+FlexStack.swift"; sourceTree = "<group>"; };
 		9F4125652ABBA6F00019717D /* SwiftSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4125682ABBA6F00019717D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F41256A2ABBA6F00019717D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				9F7AA3F62AC53B59002561F8 /* SwiftUIView.swift */,
+				9F011B562AC7C2B900B283A8 /* SwiftUIView+FlexStack.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F011B572AC7C2B900B283A8 /* SwiftUIView+FlexStack.swift in Sources */,
 				9F41256D2ABBA6F00019717D /* ViewController.swift in Sources */,
 				9FEBD8082AC5483C007CD3FB /* FlexStackViewController.swift in Sources */,
 				9F4125692ABBA6F00019717D /* AppDelegate.swift in Sources */,
