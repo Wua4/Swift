@@ -33,6 +33,10 @@ class ViewController: UIViewController {
     }
 
     func setupUI() {
+        for subViews in buttonStack.arrangedSubviews {
+            subViews.removeFromSuperview()
+        }
+
         titleLabel.font = DynamicFont.preferredFont(forTextStyle: .body)
 
         let swiftUIButton = SimpleButton("Navigate to SwiftUI")
