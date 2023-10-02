@@ -44,12 +44,30 @@ struct SwiftUIView: View {
                 .frame(width: 2,
                        height: 20,
                        alignment: .bottom)
+            ZStack(alignment: .top){
+                Image("fitbit")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Button(action: {
 
-            VStack {
-                ForEach((1...3), id: \.self) { i in
-                    Text("\(i)")
-                }
-            }
+                }) {
+                    Text("Test Position")
+                        .font(.system(size: 21))
+                        .bold()
+                        .padding(20)
+                }.background(.clear)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }.background(.yellow)
+                .frame(width: UIScreen.main.bounds.width,
+                       alignment: .center)
+                .cornerRadius(16)
+
+
+//            VStack {
+//                ForEach((1...3), id: \.self) { i in
+//                    Text("\(i)")
+//                }
+//            }
         }
         .navigationBarHidden(true)
         .background(Color.gray)
